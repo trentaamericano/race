@@ -31,7 +31,7 @@ before_install:
   - sed -i "s/yourusernamehere/travis/" wp-tests-config.php
   - sed -i "s/yourpasswordhere//" wp-tests-config.php
 
-  -mysql -e 'CREATE DATABASE wordpress_test;' -uroot
-  -cd $plugin_dir
+  - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
+  - cd $plugin_dir
 
 script: phpunit
